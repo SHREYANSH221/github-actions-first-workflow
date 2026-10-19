@@ -1,0 +1,17 @@
+
+name: My First GitHub Action
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Display greeting
+        run: echo "Hello! My first GitHub Actions workflow is working."
+
+      - name: Display repository name
+        run: echo "Repository: ${{ github.repository }}"
